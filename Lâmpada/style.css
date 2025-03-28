@@ -5,10 +5,6 @@ main {
     align-items: center;
 }
 
-on{
-    background-color: yellow;
-}
-
 button {
     width: 80px;
 }

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo Pedra, Papel e Tesoura</title>
+    <link rel="stylesheet" href="style.css"> <!--Link css-->
+</head>
+
+<body>
+
+    <div class="game-container">
+      <div class="players-container">
+         <!--Parte do Usuário-->
+        <div class="player">
+
+          <!--Opção de Pedra-->
+          <div class="option" data-value="stone" data-selected="false">
+            <img src="/JoKenPo/assets/stone.png" alt="pedra" />
+          </div>
+
+          <!--Opção de Papel-->
+          <div class="option" data-value="paper" data-selected="false">
+            <img src="/JoKenPo/assets/paper.png" alt="papel" />
+          </div>
+
+          <!--Opção de Tesoura-->
+          <div class="option" data-value="scissor" data-selected="false">
+            <img src="/JoKenPo/assets/scissor.png" alt="tesoura" />
+          </div>
+        </div>
+
+          <!--Parte da máquina-->
+        <div class="enemy">
+
+          <!--Opção de Pedra-->
+          <div class="option" data-value="stone" data-selected="false">
+            <img src="/JoKenPo/assets/stone.png" alt="pedra" />
+          </div>
+
+          <!--Opção de Papel-->
+          <div class="option" data-value="paper" data-selected="false">
+            <img src="/JoKenPo/assets/paper.png" alt="papel" />
+          </div>
+
+          <!--Opção de Tesoura-->
+          <div class="option" data-value="scissor" data-selected="false">
+            <img src="/JoKenPo/assets/scissor.png" alt="tesoura" />
+          </div>
+        </div>
+      </div>
+
+      <div class="result-container">
+        <span>Comece a jogar!</span>
+      </div>
+    </div>
+
+</body>
+
+<script src="script.js"></script> <!--Link do arquivo java script-->
+
+</html>

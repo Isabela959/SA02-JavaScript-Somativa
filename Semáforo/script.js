@@ -1,19 +1,13 @@
-const vermelho = document.querySelector('.vermelho');const amarelo = document.querySelector('.amarelo');const verde = document.querySelector('.verde');
- 
-let contador = 1;
- 
-setInterval(() => {
-	if(contador <= 1) {
-		vermelho.classList.add('vermelho-ativo');
-	} else if (contador === 5) {
-		amarelo.classList.add('amarelo-ativo');
-		vermelho.classList.remove('vermelho-ativo');
-	} else if (contador === 10) {
-		verde.classList.add('verde-ativo');
-		amarelo.classList.remove('amarelo-ativo');
-	} else if (contador === 15) {
-		verde.classList.remove('verde-ativo');
-		contador = 0;
-	}
-	contador += 1;
-}, 1000);
+const $lucesDelCirculo = document.querySelectorAll(".luces-circulo"); //Conjunto de circulos coloridos.
+let contadorDeLuz = 0; //Inicia no contador zero.
+
+const mostrarLuz = () => {
+  $lucesDelCirculo[contadorDeLuz].className = "luces-circulo";
+  contadorDeLuz++; //Após a primeira luz aparecer, começa o contador, para que a próxima luz apareça.
+  
+  if (contadorDeLuz > 5) contadorDeLuz = 0; //Loop de repetição, começa no zero e termina no cinco, fazendo voltar desde o zero e começar tudo de novo.
+
+  const luzActual = $lucesDelCirculo[contadorDeLuz];
+  luzActual.classList.add(luzActual.getAttribute("color"));
+};
+setInterval(mostrarLuz, 2000); //Mostrar a luz a cada 2000 milissegundos, ou a cada 2 segundos.
