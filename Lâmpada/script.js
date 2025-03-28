@@ -1,38 +1,40 @@
 const turnOn = document.getElementById ( 'turnOn' ); //a váriavel vai ter o mesmo id que o botão.
-const turnOff = document.getElementById ( 'turnOff' );
-const trocar = document.getElementById ( 'trocar' );
-const lamp = document.getElementById ( 'lamp' ); //a variavel vai ter o mesmo id que a imagem.
+const turnOff = document.getElementById ( 'turnOff' );//a váriavel vai ter o mesmo id que o botão.
+const trocar = document.getElementById ( 'trocar' );//a váriavel vai ter o mesmo id que o botão.
+const lamp = document.getElementById ( 'lamp' ); //a váriavel vai ter o mesmo id que a imagem.
 
-//Função de pegar o endereço da imagem e trocar pela ligada.
+// Verifica se a URL da imagem da lâmpada contém a palavra "quebrada"
+// Se for maior que -1 = quebrada || Se for menor que -1 = não está quebrada
 function isLampBroken () {
     return lamp.src.indexOf ( 'quebrada' ) > -1
 }
 
-//Função de pegar o endereço da imagem e trocar pela desligada
+//Função de pegar o endereço da imagem e trocar pela acesa.
 function lampOn () {
     if ( !isLampBroken () ) {
         lamp.src = './img/lampadas_acesa.png';
     }
 }
 
-//Função de pegar o endereço da imagem e trocar pela quebrada.
+// Verifica se a lampada não está quebrada, para assim apagá-la.
 function lampOff () {
     if ( !isLampBroken () ) {
         lamp.src = './img/lampadas_apagada.png';
     }
 }
 
-//Função de pegar o endereço da imagem e trocar pela lâmpada nova.
+//Função de pegar o endereço da imagem e trocar pela lâmpada quebrada.
 function lampBroken () {
     lamp.src = './img/lampadas_quebrada.png';
 }
 
+//Função de pegar o endereço da imagem e trocar pela lâmpada apagada.
 function lamptrocar () {
     lamp.src = './img/lampadas_apagada.png';
 }
 
-//Quando tiver um clique no botão de ligar, executar função de ligar lâmpada.
-turnOn.addEventListener ( 'click', lampOn );
-turnOff.addEventListener ( 'click', lampOff );
-lamp.addEventListener ( 'dblclick', lampBroken );
-trocar.addEventListener ( 'click', lamptrocar );
+
+turnOn.addEventListener ( 'click', lampOn );//Quando tiver um clique no botão de ligar, executar função de ligar lâmpada.
+turnOff.addEventListener ( 'click', lampOff ); //Quando tiver um clique no botão de desligar, executar função de apagar lâmpada.
+lamp.addEventListener ( 'dblclick', lampBroken ); //Quando clicar duas vezes na lâmpada, ela é quebrada
+trocar.addEventListener ( 'click', lamptrocar );//Quando tiver um clique no botão de trocar, executar função de trocar lâmpada.

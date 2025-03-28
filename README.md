@@ -15,7 +15,7 @@ NÍVEL FÁCIL - LÂMPADA
 NÍVEL MÉDIO - SEMÁFORO
 
     -Funcionalidades:
-        -Mudar de cor a cada ___ segundos.
+        -Mudar de cor a cada 2 segundos.
 
     -Desafios: 
         - Não está achando o index.html (Can not get index.html);
